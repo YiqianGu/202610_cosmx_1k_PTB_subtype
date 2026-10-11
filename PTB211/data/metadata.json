@@ -1,0 +1,392 @@
+{
+  "dataset_name": "PTB 21.1 CosMx 1K",
+  "n_cells": 249523,
+  "n_celltypes": 10,
+  "cell_types": ["B cell", "Endothelial", "Epithelial", "Fibroblast", "Mast", "Mesothelial", "Myeloid", "Proliferating", "SMC/Pericyte", "T cell"],
+  "n_genes": 150,
+  "has_polygons": true,
+  "has_proteins": true,
+  "n_proteins": 10,
+  "bounds": {
+    "x_min": 1,
+    "x_max": 10452.5,
+    "y_min": 1.8,
+    "y_max": 10540
+  },
+  "celltype_col": "cell_type",
+  "schema": 2,
+  "payload_version": "20261011121814",
+  "annotations": {
+    "cell_type": {
+      "label": "Cell type (major -> subtype)",
+      "cell_types": ["Adventitial fibroblast (C7+/SCARA5+)", "Adventitial fibroblast (PI16+)", "Aerocyte capillary EC (HPGD+/EDNRB+, mild interferon)", "Alveolar fibroblast (TCF21+)", "ambiguous: Plasma cell (IGHG1+, low-RNA)", "Angiogenic tip-like EC (APLN+/COL4A1+, EndMT-leaning)", "AP-1 high recently activated T cells", "Arterial EC (GJA5+/DKK2+, mild interferon)", "AT1 (AGER+ RTKN2+)", "AT2 (NAPSA+, interferon/acute-phase inflammatory)", "AT2 (SFTPC+, NF-kB/AP-1 inflammatory stress)", "AT2 (SFTPC+)", "B cell (MS4A1+, naive/memory mixed)", "Basal (KRT5+ TP63+, activated MMP10+)", "cDC1", "cDC2", "Ciliated (FOXJ1+)", "early-response macrophages", "FABP4⁺ alveolar macrophages", "Fibroblast, IEG-high (mixed alveolar/adventitial)", "Fibrotic fibroblast (CTHRC1+, ECM remodelling)", "FOLR2⁺ resident macrophages", "General capillary EC (FCN3+/IL7R+)", "GZMB+ CD8 T cells", "GZMK+ CD8+ T cells", "Hobit+ CD8+ T cells", "Hypoxic inflammatory fibroblast (CA9+, hypoxia; check myeloid ambient)", "hypoxic SPP1+ macrophages", "Inflammatory fibroblast (CXCL9+, IFN-gamma)", "KRT5-/KRT17+ aberrant basaloid (CDH2+, possible fibroblast/myeloid doublet admixture)", "LAMP3+ DC", "Lymphatic EC (PROX1+/CCL21+)", "Lymphoid-stroma fibroblast (CXCL13+/CCL19+)", "Mast", "Mesothelial (MSLN+/UPK3B+)", "Naive/central-memory T cells", "NK/gamma-delta T cells", "pDC", "Plasma cell (FOSB+/PRDM1+, stress/AP-1)", "Plasma cell (IGHA1+/JCHAIN+, IgA)", "Plasma cell (IGHG3+/IGHG1+, IgG)", "Plasma cell (SDC1+/IRF4+, high-RNA UPR-active)", "Proliferating", "PTB antigen-activated T", "PTB CD30⁺ granuloma effector T", "PTB IL26⁺ Th17.1-like T", "PTB MAIT17-like T", "Secretory club/goblet (SCGB1A1+ MUC5B+)", "SMC/Pericyte", "SPP1⁺ macrophages", "Subpleural-like fibroblast (WT1+/HAS1+, IEG-high)", "T-CTL/NK/GD", "Tregs", "TREM2⁺ macrophages", "Type I IFN monocytes", "Type I IFN neutrophils", "Type II IFN macrophages", "Unresolved fibroblast (no distinct markers)", "Venous EC, pulmonary (ACKR1+, NF-kB/IL6 activated)", "Venous EC, systemic/bronchial (ACKR1+/COL15A1+)"],
+      "n_celltypes": 60,
+      "parents": ["B cell", "Endothelial", "Epithelial", "Fibroblast", "Mast", "Mesothelial", "Myeloid", "Proliferating", "SMC/Pericyte", "T cell"],
+      "parent_of": [3, 3, 1, 3, 0, 1, 9, 1, 2, 2, 2, 2, 0, 2, 6, 6, 2, 6, 6, 3, 3, 6, 1, 9, 9, 9, 3, 6, 3, 2, 6, 1, 3, 4, 5, 9, 9, 6, 0, 0, 0, 0, 7, 9, 9, 9, 9, 2, 8, 6, 3, 9, 9, 6, 6, 6, 6, 3, 1, 1],
+      "n_parents": 10,
+      "parent_label": "Major cell type"
+    },
+    "activation": {
+      "label": "Activation (the targets)",
+      "cell_types": ["activated T", "early-response mac", "other"],
+      "n_celltypes": 3
+    },
+    "confidence": {
+      "label": "Transfer confidence",
+      "cell_types": ["confident", "confident (major only)", "low confidence"],
+      "n_celltypes": 3
+    }
+  },
+  "label_annotations": {
+    "AP-1 high recently activated T cells": {
+      "annotation": "subtype",
+      "n_cells": 3052,
+      "markers": ["CD69", "IL7R", "CXCR4", "CD2", "BTG1", "SPOCK2", "RGCC", "KLF2", "CCL5", "CRIP1", "FOS", "DUSP1", "ZFP36", "IL32", "MALAT1"]
+    },
+    "AT1 (AGER+ RTKN2+)": {
+      "annotation": "subtype",
+      "n_cells": 41257,
+      "markers": ["CEACAM6", "CAV1", "KRT19", "CD55", "KRT7", "TNNC1", "VEGFA", "SPOCK2", "KRT18", "EFNA1", "KRT8", "GAS6", "CD9", "ICAM1", "ALCAM", "ADIRF", "S100A10", "EZR", "TNFRSF12A", "MYL9"]
+    },
+    "AT2 (NAPSA+, interferon/acute-phase inflammatory)": {
+      "annotation": "subtype",
+      "n_cells": 103943,
+      "markers": ["LTF", "SLPI", "DMBT1", "LAMP3", "SCGB3A1", "PIGR", "ITGB6", "SERPINA1", "FASN", "CXCL17", "CLU", "CDH1", "KITLG", "EFNA1", "CLDN4", "KRT7", "KRT19", "FABP5", "AQP3", "KRT8"]
+    },
+    "AT2 (SFTPC+)": {
+      "annotation": "subtype",
+      "n_cells": 56575,
+      "markers": ["SLPI"]
+    },
+    "AT2 (SFTPC+, NF-kB/AP-1 inflammatory stress)": {
+      "annotation": "subtype",
+      "n_cells": 43941,
+      "markers": ["DMBT1", "LAMP3", "SLPI", "FASN", "LDLR", "PIGR", "CXCL1/2/3", "SERPINA1", "C11orf96", "CXCL17", "SCGB3A1", "ADGRF5", "AQP3", "ICAM1", "FABP5", "GADD45B", "CLDN4", "EFNA1", "OSMR", "ZFP36"]
+    },
+    "Adventitial fibroblast (C7+/SCARA5+)": {
+      "annotation": "subtype",
+      "n_cells": 13433,
+      "markers": ["MGP", "SFRP2", "MMP2", "DCN", "COL1A1", "COL1A2", "COL3A1", "LUM", "COL6A1", "PTGDS", "RARRES2", "COL6A3", "COL6A2", "SPARC", "BGN", "THBS1", "IGFBP7"]
+    },
+    "Adventitial fibroblast (PI16+)": {
+      "annotation": "subtype",
+      "n_cells": 8817,
+      "markers": ["COL1A2", "COL1A1", "COL3A1", "THBS2", "MMP2", "PLAC9", "PTGIS", "SFRP2", "COL5A1", "COL5A2", "FBN1", "COL6A3", "SPARC", "LUM", "DCN", "COL6A1", "COL6A2", "VCAN", "COL16A1", "IGF1"]
+    },
+    "Aerocyte capillary EC (HPGD+/EDNRB+, mild interferon)": {
+      "annotation": "subtype",
+      "n_cells": 3762,
+      "markers": ["SOSTDC1", "ACE", "RAMP3", "ADGRL2", "VWF", "RAMP2", "ACVRL1", "PECAM1", "SPARCL1", "CAV1", "TNFSF10", "IFI27", "KLF2", "GPX3", "RGCC", "COL4A1", "BST2", "ADIRF", "JUN", "S100A4"]
+    },
+    "Alveolar fibroblast (TCF21+)": {
+      "annotation": "subtype",
+      "n_cells": 66461,
+      "markers": ["THBS1", "RGCC", "GPX3", "DCN", "PTGDS", "RARRES2", "LUM", "MGP", "FN1", "MMP2", "MRC2", "COL6A3", "COL6A2", "COL6A1", "FOS", "BGN", "COL1A2", "TPM2", "DUSP1", "JUN"]
+    },
+    "Angiogenic tip-like EC (APLN+/COL4A1+, EndMT-leaning)": {
+      "annotation": "subtype",
+      "n_cells": 14865,
+      "markers": ["VWF", "INSR", "CD34", "COL4A1", "COL4A2", "LDB2", "CLEC14A", "SPARCL1", "PECAM1", "CDH5", "TM4SF1", "TIE1", "PDGFB", "FLT1", "ESAM", "RGS5", "ENG", "RAMP3", "VWA1", "ACE"]
+    },
+    "Arterial EC (GJA5+/DKK2+, mild interferon)": {
+      "annotation": "subtype",
+      "n_cells": 24227,
+      "markers": ["VWF", "LDB2", "CLEC14A", "CDH5", "FLT1", "TIE1", "IL33", "PECAM1", "TM4SF1", "RAMP3", "ACE", "RAMP2", "CD34", "ACVRL1", "HEY1", "ESAM", "RGS5", "SPARCL1", "ENG", "KLF2"]
+    },
+    "B cell (MS4A1+, naive/memory mixed)": {
+      "annotation": "subtype",
+      "n_cells": 29305,
+      "markers": ["MS4A1", "TNFRSF13B", "CD19", "CD37", "IGHM", "LTB", "CIITA", "CXCR4", "RAC2", "PTPRCAP", "CD53", "RPL32", "RPL34", "RPL37", "RPL21", "IGKC", "RACK1", "FAU", "UBA52", "COTL1"]
+    },
+    "Basal (KRT5+ TP63+, activated MMP10+)": {
+      "annotation": "subtype",
+      "n_cells": 6163,
+      "markers": ["KRT5", "KRT15", "MMP1", "KRT17", "S100A2", "KRT19", "AQP3", "IL33", "FGFR3", "SCGB3A1", "EGFR", "SAA1/2", "CXCL1/2/3", "SFN", "DDR1", "CD9", "SLPI", "KRT18", "CXCL17", "KRT8"]
+    },
+    "Ciliated (FOXJ1+)": {
+      "annotation": "subtype",
+      "n_cells": 29294,
+      "markers": ["LCN2", "SAA1/2", "SCGB3A1", "PSCA", "TUBB4B", "PIGR", "CD24", "AGR2", "S100P", "SLPI", "DDR1", "TACSTD2", "EZR", "PLAC8", "CRIP1", "CELSR1", "KRT19", "CLDN4", "EPCAM", "CXCL17"]
+    },
+    "FABP4⁺ alveolar macrophages": {
+      "annotation": "subtype",
+      "n_cells": 55268,
+      "markers": ["CCL18", "OLR1", "MRC1", "APOC1", "MARCO", "LIPA", "MSR1", "GPNMB", "APOE", "C1QB", "TREM2", "GLUL", "CD68", "C1QC", "PSAP", "TYROBP", "CD163", "C1QA", "CTSB", "ITGAX"]
+    },
+    "FOLR2⁺ resident macrophages": {
+      "annotation": "subtype",
+      "n_cells": 34699,
+      "markers": ["MS4A6A", "CD163", "C1QA", "C1QC", "C1QB", "CD14", "SAT1", "PSAP", "APOE", "CTSB", "HLA-DQB1/2", "HLA-DRB", "HLA-DQA1", "SRGN", "HLA-DRA", "HLA-DPA1", "CD74", "APOC1"]
+    },
+    "Fibroblast, IEG-high (mixed alveolar/adventitial)": {
+      "annotation": "subtype",
+      "n_cells": 3173,
+      "markers": ["CCL2", "THBS1", "MMP19", "GADD45B", "C11orf96", "ZFP36", "MT2A", "PTGDS", "JUNB", "FOS", "DCN", "RARRES2", "DUSP1", "LUM", "COL6A3", "MMP2", "FN1", "MGP", "COL6A2", "TPM2"]
+    },
+    "Fibrotic fibroblast (CTHRC1+, ECM remodelling)": {
+      "annotation": "subtype",
+      "n_cells": 31249,
+      "markers": ["THBS2", "COL11A1", "COL1A1", "COL1A2", "POSTN", "COL3A1", "COL5A1", "VCAN", "COL5A2", "ACTA2", "SPARC", "COL6A3", "MMP2", "SFRP2", "LUM", "TAGLN", "FN1", "THBS1", "BGN", "COL6A2"]
+    },
+    "GZMB+ CD8 T cells": {
+      "annotation": "subtype",
+      "n_cells": 1964,
+      "markers": ["GZMH", "CD8A", "LAG3", "KLRK1", "NKG7", "CCL5", "PRF1", "CST7", "CTSW", "GZMK", "CCL4/L1/L2", "CD69", "RUNX3", "CD2", "ITGAL", "CD3E", "NLRC5", "DUSP2", "CLEC2D", "ADGRE5"]
+    },
+    "GZMK+ CD8+ T cells": {
+      "annotation": "subtype",
+      "n_cells": 34679,
+      "markers": ["CD8A", "CCL5", "CD2", "CXCR4", "BTG1", "IL32"]
+    },
+    "General capillary EC (FCN3+/IL7R+)": {
+      "annotation": "subtype",
+      "n_cells": 45150,
+      "markers": ["VWF", "PECAM1", "SPARCL1", "COL4A1", "RGCC", "GPX3", "CAV1", "KLF2", "IFITM3"]
+    },
+    "Hobit+ CD8+ T cells": {
+      "annotation": "subtype",
+      "n_cells": 8171,
+      "markers": ["ZNF683", "CD8A", "CCL5", "CD2", "IL7R", "CXCR4", "BTG1", "IL32", "IGHG2", "IGHG1", "MALAT1"]
+    },
+    "Hypoxic inflammatory fibroblast (CA9+, hypoxia; check myeloid ambient)": {
+      "annotation": "subtype",
+      "n_cells": 29774,
+      "markers": ["COL6A3", "FN1", "MMP9", "COL3A1", "THBS2", "SPP1", "COL1A1", "TIMP1", "COL6A2", "COL5A2", "COL1A2", "COL6A1", "COL5A1", "MMP2", "POSTN", "MARCO", "RARRES2", "BGN", "VEGFA", "LUM"]
+    },
+    "Inflammatory fibroblast (CXCL9+, IFN-gamma)": {
+      "annotation": "subtype",
+      "n_cells": 72436,
+      "markers": ["COL3A1", "COL6A3", "CCL19", "COL1A2", "COL1A1", "COL6A1", "COL5A2", "TIMP1", "THBS2", "COL6A2", "POSTN", "FN1", "COL5A1", "MMP2", "MMP9", "LUM", "VCAN", "FBN1", "CYP1B1", "SFRP2"]
+    },
+    "KRT5-/KRT17+ aberrant basaloid (CDH2+, possible fibroblast/myeloid doublet admixture)": {
+      "annotation": "subtype",
+      "n_cells": 35774,
+      "markers": ["KRT17", "KRT7", "ITGB6", "MMP7", "KRT19", "KRT8", "TACSTD2", "CD24", "KRT18", "CDH1", "SERPINA1", "SFN", "TM4SF1", "CLDN4", "PDGFA", "CCND1", "EPCAM", "ITGA3", "ICAM1", "TGFB2"]
+    },
+    "LAMP3+ DC": {
+      "annotation": "subtype",
+      "n_cells": 14705,
+      "markers": ["CCR7", "CSF2RA", "CCL19", "CXCL9", "IDO1", "LAMP3", "RGS1", "IL7R", "CXCR4", "BTG1", "COTL1", "LTB", "FYB1", "IL32", "CRIP1", "CCL5", "PFN1", "ARHGDIB", "UBA52", "CD53"]
+    },
+    "Lymphatic EC (PROX1+/CCL21+)": {
+      "annotation": "subtype",
+      "n_cells": 25203,
+      "markers": ["CCL21", "IGFBP7", "PECAM1", "COL4A1", "KLF2"]
+    },
+    "Lymphoid-stroma fibroblast (CXCL13+/CCL19+)": {
+      "annotation": "subtype",
+      "n_cells": 22240,
+      "markers": ["COL6A3", "THBS2", "LUM", "CCL19", "FGF7", "COL3A1", "COL1A2", "THBS1", "COL1A1", "COL6A2", "SFRP2", "MMP2", "COL6A1", "COL5A2", "CYP1B1", "RARRES2", "CCL2", "DCN", "FBN1", "VCAN"]
+    },
+    "Mast": {
+      "annotation": "subtype",
+      "n_cells": 21471,
+      "markers": ["CPA3", "TPSAB1/B2", "KIT", "IL1RL1", "LIF", "RGS2", "RGS1", "SRGN", "ZFP36"]
+    },
+    "Mesothelial (MSLN+/UPK3B+)": {
+      "annotation": "subtype",
+      "n_cells": 15819,
+      "markers": ["ACKR3", "KRT1", "ANGPT2", "KIF26B", "MTOR", "ACKR4", "SMO", "CEACAM1", "TNFSF14", "TGFB2", "CLEC4A", "NPR2", "ITGA9", "ITGB5", "CUZD1", "NOD2", "TWIST1", "COL16A1", "PTGIS", "CYP27B1"]
+    },
+    "NK/gamma-delta T cells": {
+      "annotation": "subtype",
+      "n_cells": 9813,
+      "markers": ["GNLY", "NCR1", "KLRK1", "NKG7", "DUSP2", "CCL5", "CXCR4", "ETS1", "BTG1", "IL32", "IFITM1", "SRGN"]
+    },
+    "Naive/central-memory T cells": {
+      "annotation": "subtype",
+      "n_cells": 50922,
+      "markers": ["IL7R", "SPOCK2", "CXCR4", "LTB", "BTG1", "KLF2", "IL32"]
+    },
+    "PTB CD30⁺ granuloma effector T": {
+      "annotation": "subtype",
+      "n_cells": 3526,
+      "markers": ["TNFRSF18", "TNFRSF4", "VDR", "CD2", "LTB", "IL2RG", "BCL2", "DUSP2", "SPOCK2", "MAF", "IL32", "TNFRSF1B", "FYB1", "NLRC5", "ADGRE5", "PTPRCAP", "CCL5", "ETS1", "RAC2", "CYTOR"]
+    },
+    "PTB IL26⁺ Th17.1-like T": {
+      "annotation": "subtype",
+      "n_cells": 49612,
+      "markers": ["CD2", "CD69", "IL7R", "SPOCK2", "LTB", "FYB1", "CCL5", "BTG1", "NLRC5", "ETS1", "IL32", "RAC2", "CXCR4", "S100A4", "CD53", "ARHGDIB", "COTL1", "STAT1", "RPL34", "SH3BGRL3"]
+    },
+    "PTB MAIT17-like T": {
+      "annotation": "subtype",
+      "n_cells": 4240,
+      "markers": ["IL7R", "CD69", "CXCR4", "CD2", "CLEC2D", "SPOCK2", "ETS1", "BTG1", "MAF", "FYN", "FYB1", "NLRC5", "LTB", "CCL5", "KLF2", "CD53", "ARHGDIB", "IL32", "RPL32", "RPL34"]
+    },
+    "PTB antigen-activated T": {
+      "annotation": "subtype",
+      "n_cells": 638,
+      "markers": ["TNF", "TNFRSF18", "CD69", "DUSP2", "CD2", "SPOCK2", "LTB", "CCL5", "BTG1", "IL32"]
+    },
+    "Plasma cell (FOSB+/PRDM1+, stress/AP-1)": {
+      "annotation": "subtype",
+      "n_cells": 5079,
+      "markers": ["IGHA1", "JCHAIN", "IGKC", "MZB1", "IGHM", "IGHG1", "IGHG2", "XBP1", "IRF4", "JUN", "KLF2", "GAS6", "HSP90B1", "JUNB", "ZFP36", "DUSP1", "FOS", "NEAT1"]
+    },
+    "Plasma cell (IGHA1+/JCHAIN+, IgA)": {
+      "annotation": "subtype",
+      "n_cells": 2505,
+      "markers": ["IGHA1", "JCHAIN", "IGKC", "MZB1", "IGHG2", "IGHG1", "XBP1"]
+    },
+    "Plasma cell (IGHG3+/IGHG1+, IgG)": {
+      "annotation": "subtype",
+      "n_cells": 7246,
+      "markers": ["IGHG2", "IGHG1", "IGKC", "MZB1", "XBP1", "IGHA1"]
+    },
+    "Plasma cell (SDC1+/IRF4+, high-RNA UPR-active)": {
+      "annotation": "subtype",
+      "n_cells": 35371,
+      "markers": ["JCHAIN", "MZB1", "IGHA1", "IGHG2", "IGKC", "IGHG1", "IGHM", "XBP1", "IRF4", "LPAR5", "FKBP11", "HSP90B1", "GAS6", "CD27"]
+    },
+    "Proliferating": {
+      "annotation": "subtype",
+      "n_cells": 199764,
+      "markers": ["CD2", "LTB", "H4C3", "RAC2", "PTPRCAP", "COTL1", "ARHGDIB", "IL32", "TUBB", "IGHA1", "IGHG2", "IGHG1", "CSK", "CCL5", "CXCR4", "IGKC", "PFN1", "S100A4", "CD48", "SH3BGRL3"]
+    },
+    "SMC/Pericyte": {
+      "annotation": "subtype",
+      "n_cells": 97557,
+      "markers": ["NOTCH3", "MYH11", "ACTA2", "PDGFRB", "RGS5", "MYL9", "TAGLN", "IGFBP5", "COL4A2", "COL4A1", "CALD1", "TPM2", "COL18A1", "IGFBP7", "SPARCL1", "TPM1", "BGN", "GPX3", "COL6A2", "THBS1"]
+    },
+    "SPP1⁺ macrophages": {
+      "annotation": "subtype",
+      "n_cells": 126267,
+      "markers": ["SPP1", "CHI3L1", "LYZ", "MMP9", "MARCO", "CLEC4E", "ITGAX", "ITGB2", "CTSB", "NR1H3", "CYBB", "CD68", "GPNMB", "FCER1G", "CXCL9", "SOD2", "C1QA", "FGR", "ITGAM", "HLA-DQA1"]
+    },
+    "Secretory club/goblet (SCGB1A1+ MUC5B+)": {
+      "annotation": "subtype",
+      "n_cells": 4983,
+      "markers": ["LCN2", "SCGB3A1", "MSMB", "SAA1/2", "PIGR", "LTF", "AGR2", "KRT5", "SLPI", "KRT19", "CEACAM6", "CXCL8", "SERPINA3", "KRT15", "S100P", "CXCL17", "S100A2", "RARRES1", "S100A9", "CXCL1/2/3"]
+    },
+    "Subpleural-like fibroblast (WT1+/HAS1+, IEG-high)": {
+      "annotation": "subtype",
+      "n_cells": 33216,
+      "markers": ["COL1A2", "THBS2", "COL1A1", "COL3A1", "MMP19", "MEG3", "MMP2", "THBS1", "COL6A3", "COL5A2", "COL14A1", "SFRP2", "MGP", "PTGIS", "LUM", "PDGFRA", "COL5A1", "FGF7", "FBN1", "COL6A1"]
+    },
+    "T-CTL/NK/GD": {
+      "annotation": "subtype",
+      "n_cells": 5332,
+      "markers": ["GNLY", "ADGRG1", "CX3CR1", "PRF1", "NKG7", "CST7", "PLAC8", "CCL5", "ETS1", "KLF2", "SPOCK2", "BTG1", "CD53", "IL32", "ARHGDIB", "IFITM1", "PTGDS", "RPL21", "MALAT1", "RPL37"]
+    },
+    "TREM2⁺ macrophages": {
+      "annotation": "subtype",
+      "n_cells": 70290,
+      "markers": ["APOC1", "CCL18", "GPNMB", "APOE", "LIPA", "PSAP", "CD68", "MSR1", "C1QB", "MS4A6A", "C1QC", "CTSB", "CD163", "C1QA", "TYROBP", "HLA-DQA1", "FCER1G", "GLUL", "HLA-DRA", "LYZ"]
+    },
+    "Tregs": {
+      "annotation": "subtype",
+      "n_cells": 14511,
+      "markers": ["FOXP3", "CTLA4", "IL2RA", "TIGIT", "TNFRSF18", "MAF", "TNFRSF1B", "RGS1", "CD2", "LTB", "SPOCK2", "IL32", "BTG1", "CD53", "ARHGDIB", "S100A4"]
+    },
+    "Type I IFN monocytes": {
+      "annotation": "subtype",
+      "n_cells": 17640,
+      "markers": ["S100A9", "FGR", "PLAC8", "AIF1", "CYBB", "VSIR", "MS4A6A", "FCGR3A/B", "FCER1G", "RGS2", "COTL1", "SRGN", "S100A4", "SAT1", "CSF1R", "TYROBP", "CIITA", "FOS", "CD14", "ITGB2"]
+    },
+    "Type I IFN neutrophils": {
+      "annotation": "subtype",
+      "n_cells": 18573,
+      "markers": ["IFITM1"]
+    },
+    "Type II IFN macrophages": {
+      "annotation": "subtype",
+      "n_cells": 11798,
+      "markers": ["CXCL10", "CXCL9", "NR1H3", "CLEC4E", "CD163", "IL18", "C1QC", "CSF2RA", "LYZ", "C1QA", "ITGAX", "CLEC7A", "CYBB", "GLUL", "C1QB", "SAT1", "CIITA", "MS4A6A", "CSF2RB", "CTSB"]
+    },
+    "Unresolved fibroblast (no distinct markers)": {
+      "annotation": "subtype",
+      "n_cells": 1411,
+      "markers": ["MMP2", "COL1A1", "RARRES2", "COL6A3", "COL3A1", "THBS1", "BGN", "DCN", "LUM", "COL6A2", "COL1A2"]
+    },
+    "Venous EC, pulmonary (ACKR1+, NF-kB/IL6 activated)": {
+      "annotation": "subtype",
+      "n_cells": 8541,
+      "markers": ["ACKR1", "VWF", "RAMP3", "PECAM1", "TM4SF1", "KLF2", "CLU", "IGFBP7", "SPARCL1", "GPX3", "CAV1", "DUSP1", "IFITM3", "MGP", "YBX3", "IFITM1"]
+    },
+    "Venous EC, systemic/bronchial (ACKR1+/COL15A1+)": {
+      "annotation": "subtype",
+      "n_cells": 16488,
+      "markers": ["ACKR1", "VWF", "RAMP3", "SPARCL1", "TM4SF1", "LDB2", "PECAM1", "CLEC14A", "ENG", "IL33", "IGFBP7", "RGS5", "POSTN", "RAMP2", "ITGA5", "COL4A1", "APP", "COL4A2", "MGP", "KLF2"]
+    },
+    "ambiguous: Plasma cell (IGHG1+, low-RNA)": {
+      "annotation": "subtype",
+      "n_cells": 11225,
+      "markers": ["IGKC", "IGHG1", "IGHG2", "IGHA1"]
+    },
+    "cDC1": {
+      "annotation": "subtype",
+      "n_cells": 44386,
+      "markers": ["CIITA", "COTL1", "LTB", "HLA-DPB1", "HLA-DPA1", "HLA-DQB1/2", "HLA-DQA1", "CD74", "ARHGDIB", "HLA-DRB", "CD53", "PFN1", "SH3BGRL3", "HLA-DRA", "UBA52", "ITGB2", "ATP5F1E", "RPL37", "SRGN", "RPL34"]
+    },
+    "cDC2": {
+      "annotation": "subtype",
+      "n_cells": 10944,
+      "markers": ["RELT", "LTB", "CIITA", "COTL1", "HLA-DQB1/2", "GSN", "HLA-DPB1", "CD37", "HLA-DQA1", "HLA-DRA", "HLA-DPA1", "HLA-DRB", "CD74", "ITGB2", "CD53", "GPX1", "SRGN", "PFN1", "ARHGDIB", "SAT1"]
+    },
+    "early-response macrophages": {
+      "annotation": "subtype",
+      "n_cells": 18868,
+      "markers": ["CD163", "MS4A6A", "RGS2", "CLEC7A", "CIITA", "CSF2RA", "RGS1", "MSR1", "SAT1", "MS4A4A", "C1QC", "C1QB", "C1QA", "LAIR1", "SRGN", "ITGAX", "FOS", "FES", "GLUL", "ZFP36"]
+    },
+    "hypoxic SPP1+ macrophages": {
+      "annotation": "subtype",
+      "n_cells": 16321,
+      "markers": ["SPP1", "MARCO", "MMP9", "CHI3L1", "LYZ", "NDRG1", "MT2A", "MIF", "CD68", "GPNMB", "CTSB", "ENO1", "VIM", "SOD2", "ITGB2", "TYROBP", "CD44", "VEGFA", "SRGN", "GLUL"]
+    },
+    "pDC": {
+      "annotation": "subtype",
+      "n_cells": 9162,
+      "markers": ["GZMB", "PLAC8", "IRF4", "JCHAIN", "MZB1", "IGHA1", "LTB", "CXCR4", "IGKC", "RAC2", "CD37", "IGHG1", "IGHG2", "CD53", "TPM2", "COTL1", "PTGDS", "RPL21", "XBP1", "UBA52"]
+    },
+    "B cell": {
+      "annotation": "major cell type",
+      "n_cells": 90731,
+      "markers": ["IGHG2", "IGHM", "IGKC", "IGHA1", "JCHAIN", "IGHG1", "MZB1", "XBP1", "CD37"]
+    },
+    "Endothelial": {
+      "annotation": "major cell type",
+      "n_cells": 138236,
+      "markers": ["VWF", "LDB2", "RAMP3", "PECAM1", "TM4SF1", "SPARCL1", "ENG", "COL4A1", "COL4A2", "KLF2", "IFI27", "CAV1", "IGFBP7", "GPX3", "RGCC", "TGFBR2", "IFITM3", "MGP", "DUSP6", "DUSP1"]
+    },
+    "Epithelial": {
+      "annotation": "major cell type",
+      "n_cells": 321930,
+      "markers": ["SCGB3A1", "SLPI", "PIGR", "LAMP3", "KRT19", "KRT7", "CXCL17", "FASN", "SERPINA1", "CLDN4", "KRT8", "KRT18", "EFNA1", "AQP3", "CD55", "CD9", "TUBB4B", "EZR", "CAV1", "ICAM1"]
+    },
+    "Fibroblast": {
+      "annotation": "major cell type",
+      "n_cells": 282210,
+      "markers": ["THBS2", "COL3A1", "COL1A1", "COL1A2", "COL6A3", "MMP2", "COL5A2", "LUM", "COL6A2", "COL6A1", "COL5A1", "FN1", "THBS1", "DCN", "POSTN", "RARRES2", "SFRP2", "FBN1", "SPARC", "BGN"]
+    },
+    "Mast.1": {
+      "annotation": "major cell type",
+      "n_cells": 21471,
+      "markers": ["CPA3", "TPSAB1/B2", "KIT", "IL1RL1", "LIF", "RGS2", "RGS1", "SRGN", "ZFP36"]
+    },
+    "Mesothelial": {
+      "annotation": "major cell type",
+      "n_cells": 15819,
+      "markers": ["ACKR3", "KRT1", "ANGPT2", "KIF26B", "MTOR", "ACKR4", "SMO", "CEACAM1", "TNFSF14", "TGFB2", "CLEC4A", "NPR2", "ITGA9", "ITGB5", "CUZD1", "NOD2", "TWIST1", "COL16A1", "PTGIS", "CYP27B1"]
+    },
+    "Myeloid": {
+      "annotation": "major cell type",
+      "n_cells": 448921,
+      "markers": ["LYZ", "ITGAX", "MARCO", "GPNMB", "APOC1", "CHI3L1", "MSR1", "CTSB", "APOE", "C1QB", "CD68", "C1QA", "CD163", "C1QC", "FCER1G", "MS4A6A", "CYBB", "PSAP", "TYROBP", "HLA-DQA1"]
+    },
+    "Proliferating.1": {
+      "annotation": "major cell type",
+      "n_cells": 199764,
+      "markers": ["CD2", "LTB", "H4C3", "RAC2", "PTPRCAP", "COTL1", "ARHGDIB", "IL32", "TUBB", "IGHA1", "IGHG2", "IGHG1", "CSK", "CCL5", "CXCR4", "IGKC", "PFN1", "S100A4", "CD48", "SH3BGRL3"]
+    },
+    "SMC/Pericyte.1": {
+      "annotation": "major cell type",
+      "n_cells": 97557,
+      "markers": ["NOTCH3", "MYH11", "ACTA2", "PDGFRB", "RGS5", "MYL9", "TAGLN", "IGFBP5", "COL4A2", "COL4A1", "CALD1", "TPM2", "COL18A1", "IGFBP7", "SPARCL1", "TPM1", "BGN", "GPX3", "COL6A2", "THBS1"]
+    },
+    "T cell": {
+      "annotation": "major cell type",
+      "n_cells": 186460,
+      "markers": ["CD2", "IL7R", "CCL5", "SPOCK2", "CXCR4", "BTG1", "LTB", "IL32", "ARHGDIB"]
+    }
+  }
+}

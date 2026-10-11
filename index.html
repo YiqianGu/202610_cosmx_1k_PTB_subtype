@@ -1,0 +1,69 @@
+<!doctype html><html><head><meta charset="utf-8">
+    <title>PTB CosMx 1K — subtype viewer</title>
+    <style>body{font-family:system-ui,sans-serif;margin:40px;background:#0f1116;color:#e6e6e6}
+    h1{font-weight:600;margin-bottom:4px}.sub{color:#9aa4b2;margin-top:0}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;margin-top:24px;max-width:900px}
+    .card{display:block;padding:20px;background:#1b1f2a;border:1px solid #2a2f3a;border-radius:12px;text-decoration:none;color:#e6e6e6;transition:.15s}
+    .card:hover{border-color:#4E9AF1;transform:translateY(-2px)}.card h2{margin:0 0 8px;font-size:1.1rem}
+    .card p{margin:0;color:#9aa4b2;font-size:.9rem}
+    .note{margin-top:32px;padding:16px 20px;background:#1b1f2a;border-left:3px solid #E64B35;border-radius:6px;max-width:900px;color:#c9d1d9;font-size:.9rem;line-height:1.55}
+    .note b{color:#e6e6e6}code{background:#0f1116;padding:1px 5px;border-radius:4px}</style></head>
+    <body><h1>PTB CosMx 1K — subtype viewer</h1>
+    <p class="sub">Six specimens, 1,803,099 cells, 1,000-gene panel. Labels transferred from the
+    202610 combined snRNA reference in two rounds: 10 major types, then 60 subtypes within lineage.</p>
+    <div class="grid">
+    <a class="card" href="PTB211/index.html"><h2>PTB 21.1</h2><p>249,523 cells &middot; 3 annotation layers &middot; 150 genes &middot; 10 IF channels</p></a>
+<a class="card" href="PTB221/index.html"><h2>PTB 22.1</h2><p>165,813 cells &middot; 3 annotation layers &middot; 150 genes &middot; 10 IF channels</p></a>
+<a class="card" href="PTB223/index.html"><h2>PTB 22.3</h2><p>310,967 cells &middot; 3 annotation layers &middot; 150 genes &middot; 10 IF channels</p></a>
+<a class="card" href="PTB241/index.html"><h2>PTB 24.1</h2><p>197,175 cells &middot; 3 annotation layers &middot; 150 genes &middot; 10 IF channels</p></a>
+<a class="card" href="PTB242/index.html"><h2>PTB 24.2</h2><p>298,037 cells &middot; 3 annotation layers &middot; 150 genes &middot; 10 IF channels</p></a>
+<a class="card" href="PTB243/index.html"><h2>PTB 24.3</h2><p>581,584 cells &middot; 3 annotation layers &middot; 150 genes &middot; 10 IF channels</p></a>
+    </div>
+    <div class="note"><b>What to click.</b> The <code>Cell type</code> layer opens on the 10 major
+    types. Click the <code>&#9656;</code> chevron on a row to expand that major into its subtypes and
+    leave the others collapsed &mdash; so you can show <i>TREM2&#8314; macrophages</i> at subtype level
+    beside <i>Fibroblast</i> at major level, in one view. <code>Expand all</code> /
+    <code>Collapse all</code> do every row at once. The dropdown also holds <b>Activation</b> (just
+    the two populations of interest) and <b>Transfer confidence</b>.
+    Each legend row has a colour picker — your choices persist in the browser — and a
+    <code>genes</code> button listing that label&rsquo;s <b>top 20 marker genes</b>; click a gene to
+    colour cells by its expression. The <span style="color:#ffd54f">&#9678;</span> button rings
+    those cells, or paste cell IDs into the highlight box.
+    <br><br><b>Read these caveats before quoting anything.</b>
+    <br><br><b>1. This panel resolves subtypes far less well than the 6K does.</b> Of the 1,000
+    probes, 992 are human genes and 923 of those are in the reference. But the <b>median
+    reference subtype keeps only 26% of its marker list on this panel</b>, against 68% on the
+    6K; 19 of 57 subtypes keep fewer than 20 markers and one keeps 2. A subtype call here is a
+    best match among 60 options on a thin gene set, not a confident identification. The
+    per-subtype table is in <code>A00_verify_setup/02_verify/subtype_marker_coverage.csv</code>.
+    <br><br><b>2. The immediate-early programme is essentially absent.</b>
+    <code>EGR1</code>, <code>EGR2</code>, <code>NR4A1/2/3</code>, <code>KDM6B</code>,
+    <code>FOSB</code> and <code>TRAC</code> are all off-panel; only <code>FOS</code>,
+    <code>IER3</code>, <code>ATF3</code> and <code>DUSP1</code> survive. Both populations on the
+    <b>Activation</b> layer are defined in the reference by exactly that programme:
+    <code>PTB antigen-activated T</code> keeps 10 of its 40 reference markers here and
+    <code>early-response macrophages</code> 66 of 437. Treat that layer as a pointer for
+    inspection, not as a count.
+    <br><br><b>3. Between-sample composition is confounded with segmentation.</b> PTB&nbsp;21.1 and
+    PTB&nbsp;24.3 were segmented with <code>seg_2026</code>; PTB&nbsp;22.1, PTB&nbsp;22.3,
+    PTB&nbsp;24.1 and PTB&nbsp;24.2 with <code>seg_202606</code>. Median library size also ranges
+    2x across samples (114 to 217 counts). A composition difference between samples is not
+    automatically biology. PTB&nbsp;22.1 and PTB&nbsp;22.3 are two tissue blocks from one slide,
+    split at a measured 2.19&nbsp;mm void in y.
+    <br><br><b>4. Immunofluorescence is not uniform.</b> <code>CD3</code> exists on five of the six
+    samples but <b>not on PTB&nbsp;21.1</b>, which carries <code>CD68</code> instead.
+    <code>CD45</code>, <code>PanCK</code>, <code>Membrane</code> and <code>DAPI</code> are on all
+    six. Any CD3-based statement excludes PTB&nbsp;21.1.
+    <br><br><b>5. The QC floor is deliberately low.</b> Cells were kept at
+    <code>&ge;20</code> counts (95.1% retained), chosen because every higher floor
+    preferentially deletes T cells &mdash; at 100 counts the deleted cells are up to 2.4x more
+    T-enriched than those kept, and PTB&nbsp;21.1 would lose 45% of its cells. The cost is that
+    sparse cells are admitted; they are flagged on the <b>Transfer confidence</b> layer rather
+    than deleted, so filter there rather than assuming every cell is well measured.
+    <br><br><b>6. <code>Proliferating</code> is a single-subtype label that absorbs T cells</b> in
+    this project&rsquo;s earlier runs, so treat it with suspicion rather than as a proliferation
+    measure. The panel also carries eight bacterial 16S/23S probes
+    (<i>M.&nbsp;tuberculosis</i>/<i>bovis</i>, <i>M.&nbsp;leprae</i>, <i>C.&nbsp;acnes</i>,
+    pan-bacterial) which are <b>excluded from the RNA assay and from the transfer</b>; they are
+    at background level and are not shown here.</div>
+    </body></html>
